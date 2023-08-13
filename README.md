@@ -7,7 +7,7 @@ Written by Benny Mattis for Catholic Volunteer Network
 
 Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database.
 
-##How to Use
+## How to Use
 
 Link to download dynamically generated directory using shortcode [digital_response_link]. 
 
@@ -17,6 +17,6 @@ Footer with page number is excluded from ads (i.e. the first two pages of digita
 
 Override PDF generation by uploading a pdf directory to the media library titled digital-response-replacement. 
 
-##Features
+## Features
 
 Refreshes file daily for new listings (upon site visit), and refreshes file whenever an attachment is uploaded, edited, or deleted with a title containing "digital-response." 
