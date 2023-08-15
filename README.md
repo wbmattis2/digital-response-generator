@@ -23,6 +23,10 @@ Section 1 should consist of a cover page, a full-page ad immediately following t
 
 Each subsequent digital response section should include any number of full-page (statement size pdf) ads. Usually there will be one or two ads in a given section. If a section has multiple pages, those pages will appear back-to-back in the generated PDF. The first section will be placed at the beginning of the generated PDF; the last section will be placed at the end, and any additional in-between sections will be dispersed among the listings.
 
+### Table of Contents image
+
+You can include an image to be placed above the table of contents by uploading it in PNG or JPG format to the media library. The image should be titled digital-response-contents-logo.
+
 ### Shortcode
 
 Link to download dynamically generated directory by using shortcode \[digital_response_link\] in the contents of a Post or Page. 
