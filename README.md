@@ -15,7 +15,7 @@ Incorporates static sections using most recent media uploads titled digital-resp
 
 Update sections by uploading pdfs with the same title. E.g., change section 2 by uploading a newer pdf with the title digital-response-section-2.
 
-All pages should be "statement" size (5.5in wide x 8.5in tall).
+All pages should be "statement" size (5.5in wide x 8.5in high) in portrait orientation.
 
 Sections cannot be skipped: If PDFs entitled digital-response-section-1, digital-response-section-section-2, and digital-response-section-4 exist in the media library, then section 4 (and any subsequent sections) will be ignored until there is a pdf entitled digital-response-section-3 in the media library.
 
