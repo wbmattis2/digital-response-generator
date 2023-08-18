@@ -21,19 +21,19 @@ Sections cannot be skipped: If PDFs entitled digital-response-section-1, digital
 
 Section 1 should consist of a cover page, a full-page ad immediately following the cover page, and any number of subsequent pages containing introductory information.
 
-Each subsequent digital response section should include any number of full-page (statement size pdf) ads. Usually there will be one or two ads in a given section. If a section has multiple pages, those pages will appear back-to-back in the generated PDF. The first section will be placed at the beginning of the generated PDF; the last section will be placed at the end, and any additional in-between sections will be dispersed among the listings.
+Each subsequent digital response section should include any number of full-page (statement size PDF) ads. Usually there will be one or two ads in a given section. If a section has multiple pages, those pages will appear back-to-back in the generated PDF. The first section will be placed at the beginning of the generated PDF; the last section will be placed at the end, and any additional in-between sections will be dispersed among the listings.
 
 ### Table of Contents image
 
-You can include an image to be placed above the table of contents by uploading it in PNG or JPG format to the media library. The image should be titled digital-response-contents-logo.
+You can include an image to be placed above the table of contents by uploading it in .PNG or .JPG format to the media library. The image should be titled digital-response-contents-logo.
 
 ### Shortcode
 
-Link to download dynamically generated directory by using shortcode \[digital_response_link\] in the contents of a Post or Page. 
+Link to download dynamically generated directory by using shortcode ```\[digital_response_link\]``` in the contents of a Post or Page. This link is an anchor that can be styled with the class ```.digital-response-link```.
 
 ### Override PDF
 
-Override the PDF generation process by uploading a pdf to the media library titled digital-response-replacement. Links created with the \[digital_response_link\] shortcode will then trigger a download of the file titled digital-response-replacement.
+Override the PDF generation process by uploading a pdf to the media library titled digital-response-replacement. Links created with the ```\[digital_response_link\]``` shortcode will then trigger a download of the file titled digital-response-replacement.
 
 ## Features
 
