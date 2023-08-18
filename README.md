@@ -1,7 +1,7 @@
 # digital-response-generator
 WordPress plugin generating member directory with Neon CRM API
 
-Written by Benny Mattis for Catholic Volunteer Network
+Written by Benny Mattis for Catholic Volunteer Network, using TCPDF and FPDI.
 
 ## Purpose
 
