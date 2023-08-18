@@ -5,7 +5,7 @@ Written by Benny Mattis for Catholic Volunteer Network
 
 ## Purpose
 
-Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database.
+Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database. Automates process of retrieving and inserting data about member organizations from the Neon database.
 
 ## How to Use
 
