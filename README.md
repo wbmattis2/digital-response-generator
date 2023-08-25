@@ -13,6 +13,8 @@ Generates a directory of member programs by combining uploaded static pages with
 
 Incorporates static sections using most recent media uploads titled digital-response-section-1, digital-response-section-2, etc. 
 
+**Please Note** that this plugin identifies media uploads by their **title** in WordPress, rather than their URL or filename. Admins can view and edit an item's title by clicking on the item in the Media Library.
+
 Update sections by uploading pdfs with the same title. E.g., change section 2 by uploading a newer pdf with the title digital-response-section-2.
 
 All pages should be "statement" size (5.5in wide x 8.5in high) in portrait orientation.
