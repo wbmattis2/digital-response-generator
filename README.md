@@ -1,11 +1,13 @@
 # digital-response-generator
 WordPress plugin generating member directory with Neon CRM API
 
-Written by Benny Mattis for Catholic Volunteer Network, using TCPDF and FPDI.
+Written by Benny Mattis for Catholic Volunteer Network, using the Neon CRM API with FPDI and a modified version of TCPDF.  
+
+A "pretty" version of these docs can be found at [https://wbmattis2.github.io/docs/digital-response-generator]
 
 ## Purpose
 
-Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database. Automates process of retrieving and inserting data about member organizations from the Neon database.
+Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database. Automates process of retrieving and inserting data about member organizations from the Neon database.  
 
 ## How to Use
 
@@ -49,5 +51,37 @@ Footer with page number is excluded from ads (i.e. the first two pages of digita
 
 ### Ignores test accounts
 
-When gathering listings from the database, this plugin ignores any member organizations whose name includes the word " test " (case-insensitive), in order to avoid listing accounts created for NEON database testing purposes. If any member organizations in the future include the word " test " in their name, then test accounts in the NEON database will have to be marked differently, and this feature of the Digital Response Generator will have to be changed appropriately.
+When gathering listings from the database, this plugin ignores any member organizations whose name includes the word " test " (case-insensitive), in order to avoid listing accounts created for NEON database testing purposes. If any member organizations in the future include the word " test " in their name, then test accounts in the NEON database will have to be marked differently, and this feature of the Digital Response Generator will have to be changed appropriately.  
+
+## Troubleshooting  
+
+### Why is the file refreshing at strange times?  
+
+The directory is set to refresh on a daily basis, but it will only refresh when people visit the site. So, if it has been more than a day since anyone viewed the site, it will refresh when (and only when) someone views it. 
+
+### I've uploaded files with the right file names. Why isn't the plugin refreshing the directory?  
+
+The plugin identifies relevant files by their titles, rather than their file names. To view a document's title in the media library, click on the document and check the "title" field in the media preview screen.
+
+### I made sure that the titles are correct, but the directory is still not being dynamically regenerated.  
+
+Is there a file in your Media Library with the title "digital-response-replacement"? If so, then that file will serve as the directory, and the dynamic PDF generation feature will be overridden until that file is deleted or its title is changed. 
+
+### The plugin still isn't working as expected.  
+
+Please ensure that all of the static pages you have uploaded to your media library are .pdf files in "Statement" size and "Portrait" orientation. If you are using a Table of Contents image, ensure that it is a .png or .jpg file. If all else fails, feel free to contact me (Benny) with a description of the situation. Contact information can be found on [my GitHub profile](https://github.com/wbmattis2).
+
+
+
+## Software Used  
+
+[TCPDF](https://tcpdf.org/docs/license/) is available under the GNU Public License 3.0; [FPDI](https://www.setasign.com/products/fpdi/about/) is available to use under the MIT license.  
+
+The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the $tw value assignment in the definition of addTOC(). Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from $tw.  
+
+## Special Thanks  
+
+Special thanks to [Catholic Volunteer Network](https://catholicvolunteernetwork.org/) and [Perisphere Media](https://perispheremedia.com/) for their involvement and feedback in design, development, and deployment.  
+
+
 
