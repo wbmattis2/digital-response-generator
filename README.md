@@ -33,11 +33,11 @@ You can include an image to be placed above the table of contents by uploading i
 
 ### Shortcode
 
-Link to download dynamically generated directory by using shortcode ```\[digital_response_link\]``` in the contents of a Post or Page. This link is an anchor that can be styled with the class ```.digital-response-link```.
+Link to download dynamically generated directory by using shortcode `[digital_response_link]` in the contents of a Post or Page. This link is an anchor that can be styled with the class `.digital-response-link`.
 
 ### Override PDF
 
-Override the PDF generation process by uploading a pdf to the media library titled digital-response-replacement. Links created with the ```\[digital_response_link\]``` shortcode will then trigger a download of the file titled digital-response-replacement.
+Override the PDF generation process by uploading a pdf to the media library titled digital-response-replacement. Links created with the `[digital_response_link]` shortcode will then trigger a download of the file titled digital-response-replacement.
 
 ## Features
 
@@ -77,7 +77,7 @@ Please ensure that all of the static pages you have uploaded to your media libra
 
 [TCPDF](https://tcpdf.org/docs/license/) is available under the GNU Public License 3.0; [FPDI](https://www.setasign.com/products/fpdi/about/) is available to use under the MIT license.  
 
-The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the $tw value assignment in the definition of addTOC(). Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from $tw.  
+The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the `$tw` value assignment in the definition of `addTOC()`. Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from `$tw`.  
 
 ## Special Thanks  
 
