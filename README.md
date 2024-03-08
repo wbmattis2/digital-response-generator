@@ -51,7 +51,7 @@ Footer with page number is excluded from ads (i.e. the first two pages of digita
 
 ### Ignores test accounts
 
-When gathering listings from the database, this plugin ignores any member organizations whose name includes the word " test " (case-insensitive), in order to avoid listing accounts created for NEON database testing purposes. If any member organizations in the future include the word " test " in their name, then test accounts in the NEON database will have to be marked differently, and this feature of the Digital Response Generator will have to be changed appropriately.  
+When gathering listings from the database, this plugin ignores any member organizations marked as "Hidden" in Neon CRM. Please note that "Hidden" is a custom organization field, distinct from the "Include in Directory" field that Neon uses for its built-in directory feature.  
 
 ## Troubleshooting  
 
