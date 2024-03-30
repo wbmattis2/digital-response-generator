@@ -1,15 +1,19 @@
 # digital-response-generator
-WordPress plugin generating member directory with Neon CRM API
+WordPress plugin generating member directory and website data with the Neon CRM API
 
 Written by Benny Mattis for Catholic Volunteer Network, using the Neon CRM API with FPDI and a modified version of TCPDF.  
 
-A "pretty" version of these docs can be found at [https://wbmattis2.github.io/docs/digital-response-generator]
+A "pretty" version of these docs can be found at (https://catholicvolunteernetwork.org/wp-content/plugins/digital-response-generator/docs/).
 
 ## Purpose
 
-Generates a directory of member programs by combining uploaded static pages with data retrieved from Neon CRM database. Automates process of retrieving and inserting data about member organizations from the Neon database.  
+Automates process of retrieving data from Neon CRM for dynamic access by website features such as:
+* a downloadable PDF directory of member programs
+* job board listings
+* urgent volunteer opportunity listings
+* events calendar
 
-## How to Use
+## How to Use: PDF Directory
 
 ### Upload static sections
 
@@ -33,11 +37,67 @@ You can include an image to be placed above the table of contents by uploading i
 
 ### Shortcode
 
-Link to download dynamically generated directory by using shortcode `[digital_response_link]` in the contents of a Post or Page. This link is an anchor that can be styled with the class `.digital-response-link`.
+Link to download dynamically generated directory by using shortcode `[digital_response_link]` in the contents of a Post or Page. This link is an anchor that can be styled with the class `digital-response-link`.
 
 ### Override PDF
 
 Override the PDF generation process by uploading a pdf to the media library titled digital-response-replacement. Links created with the `[digital_response_link]` shortcode will then trigger a download of the file titled digital-response-replacement.
+
+## How to Use: Web Page Listings
+
+### Web Listing Shortcodes
+
+Use shortcodes to display:
+* Job listings (`[digital_response_job_board]`)
+* Urgent Opportunities (`[digital_response_urgent_opps]`)
+* Events (`[digital_response_events_calendar]`)
+
+For ease of editing, styling should be added to each page as desired. 
+
+### Web Listing Styles
+
+The contents of the shortcode are all contained in a `div` with the class `drg-listings-container`.
+
+If there are listings, then each listing will be contained in a `div` with the class `drg-listing-div`.
+
+The listing title is contained in an `h2` with the class of `drg-listing-title`. Subsequent components of the listing are contained in `div`s with the following classes:
+```
+drg-listing-name
+drg-listing-open-date
+drg-listing-close-date
+drg-listing-start-date
+drg-listing-end-date
+drg-listing-description
+drg-listing-type
+drg-listing-countries
+drg-listing-states
+```
+The labels prefacing each component of the listing are enclosed in `span` tags with the class `drg-label`.
+
+The recommended default styling is as follows:
+```
+<style>
+.drg-listings-container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.drg-listing-title a,
+.drg-listing-title a:link, 
+.drg-listing-title a:visited,
+.drg-listing-title a:hover, 
+.drg-listing-title a:active {
+    background-color: #27708b;
+    color: white;
+    font-family: "Sorce Sans Pro", sans-serif;
+    font-weight: 700 !important;
+    padding: .35em .8em !important;
+}
+.drg-label {
+    font-weight: bold;
+}
+</style>
+```
 
 ## Features
 
@@ -52,6 +112,10 @@ Footer with page number is excluded from ads (i.e. the first two pages of digita
 ### Ignores test accounts
 
 When gathering listings from the database, this plugin ignores any member organizations marked as "Hidden" in Neon CRM. Please note that "Hidden" is a custom organization field, distinct from the "Include in Directory" field that Neon uses for its built-in directory feature.  
+
+### JSON for extensibility
+
+With future enhancements, the JSON file containing Neon CRM data may be used to provide fresh Neon CRM data for other website features (e.g. a map indicating the location data of member programs, events, urgent opportunities, and job opportunities).
 
 ## Troubleshooting  
 
@@ -71,17 +135,14 @@ Is there a file in your Media Library with the title "digital-response-replaceme
 
 Please ensure that all of the static pages you have uploaded to your media library are .pdf files in "Statement" size and "Portrait" orientation. If you are using a Table of Contents image, ensure that it is a .png or .jpg file. If all else fails, feel free to contact me (Benny) with a description of the situation. Contact information can be found on [my GitHub profile](https://github.com/wbmattis2).
 
-
-
 ## Software Used  
 
 [TCPDF](https://tcpdf.org/docs/license/) is available under the GNU Public License 3.0; [FPDI](https://www.setasign.com/products/fpdi/about/) is available to use under the MIT license.  
 
-The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the `$tw` value assignment in the definition of `addTOC()`. Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from `$tw`.  
+The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the `$tw` value assignment in the definition of `addTOC()`. Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from `$tw`. 
+
+More information about the Neon CRM API can be found at (https://developer.neoncrm.com/).
 
 ## Special Thanks  
 
 Special thanks to [Catholic Volunteer Network](https://catholicvolunteernetwork.org/) and [Perisphere Media](https://perispheremedia.com/) for their involvement and feedback in design, development, and deployment.  
-
-
-
