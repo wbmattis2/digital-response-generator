@@ -82,6 +82,13 @@ The recommended default styling is as follows:
     width: 50%;
     margin: auto;
 }
+.drg-listing {
+    margin: 5em auto;
+    border: 5px solid #27708b;
+}
+.drg-listing > * {
+    margin: 1em;
+}
 .drg-listing-title a,
 .drg-listing-title a:link, 
 .drg-listing-title a:visited,
