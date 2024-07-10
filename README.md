@@ -53,9 +53,11 @@ Use shortcodes to display:
 * Urgent Opportunities (`[digital_response_urgent_opps]`)
 * Events (`[digital_response_events_calendar]`)
 
-Users with JavaScript enabled can enter a location and search radius to narrow displayed results.
+Users with JavaScript enabled can enter a location and search radius to narrow down displayed results.
 
-Styles are included in the shortcode and can be found in the plugin folder assets/css/listing.css.
+Styles are included in the shortcode and can be found in the plugin folder under assets/css/listing.css.
+
+Listings can be added to Company accounts in Neon CRM through Neon forms or added manually by Neon CRM system users. Listings for accounts marked "hidden" will not appear on the listings pages.
 
 ## How to Use: Member Map
 
@@ -63,7 +65,9 @@ Use shortcode `digital_response_map` to display a map of places served by member
 
 Users can enter a location and search radius to narrow displayed results.
 
-The member map is generated with Leaflet (included at assets/libraries/leaflet) and OpenStreetMaps.
+The member map is generated with Leaflet (included at assets/libraries/leaflet). 
+
+Tilesets are gathered by default from the US Geographic Survey. This can be changed in the WordPress Dashboard under Settings -> General -> Digital Response Generator Settings.
 
 Styles are included in the shortcode and can be found in the plugin folder assets/css/member-map.css.
 
@@ -78,6 +82,10 @@ As opposed to location-data.json, which is organized by location and includes ge
 ### Automatic refresh
 
 Refreshes file daily for new listings (upon site visit), and refreshes file whenever an attachment is uploaded, edited, or deleted with a title containing "digital-response." Please note that refresh occurs only when somebody visits the site, e.g. if nobody visits the website for a week, then the file will not be refreshed during that time, but it will automatically refresh as soon as somebody visits the site (given that the plugin is installed and activated). This should be kept in mind if anyone intends to download an updated file directly without visiting the website.
+
+### Adjustable settings
+
+WordPress administrators with access to general settings can directly the API key used to query the Neon CRM API, as well as the member map's tileset source and tileset source attribution. 
 
 ### Footer excluded from select pages
 
