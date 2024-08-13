@@ -1,9 +1,11 @@
 # digital-response-generator
 WordPress plugin generating member directory and website data with the Neon CRM API
 
-Written by Benny Mattis for Catholic Volunteer Network, using the Neon CRM API with FPDI and a modified version of TCPDF.  
+Written by Benny Mattis for Catholic Volunteer Network, using the Neon CRM API with Leaflet.js, FPDI, and a modified version of TCPDF.
 
-A "pretty" version of these docs can be found at (https://catholicvolunteernetwork.org/wp-content/plugins/digital-response-generator/docs/).
+A "pretty" version of these docs can be found at (https://catholicvolunteernetwork.org/wp-content/plugins/neon-wp-plugin/digital-response-generator/docs/).
+
+Please note that as of August 2024, the Digital Response Generator has been fused with the Neon plugin (*neon-wp-plugin*). The Digital Response Generator's files have been moved into the Neon plugin's directory, and *digital-response-generator.php* has been included at the end of the Neon plugin's *plugin.php* file.
 
 ## Purpose
 
@@ -85,7 +87,9 @@ Refreshes file daily for new listings (upon site visit), and refreshes file when
 
 ### Adjustable settings
 
-WordPress administrators with access to general settings can directly the API key used to query the Neon CRM API, as well as the member map's tileset source and tileset source attribution. 
+WordPress administrators with the `manage_options` capability can change the member map's tileset source and tileset source attribution if the map malfunctions. The recommended default is to use data from the [U.S. Geological Survey](https://www.usgs.gov/). 
+
+The settings page is located in a submenu under the Neon plugin. The API key can be changd in the Neon plugin's "Token" settings field.
 
 ### Footer excluded from select pages
 
@@ -130,6 +134,8 @@ Please ensure that all of the static pages you have uploaded to your media libra
 The version of TCPDF used in this plugin has been modified; some files unnecessary for the plugin's functionality have been removed, and line 21579 has been altered. The modification consisted of adding "-.35" to the `$tw` value assignment in the definition of `addTOC()`. Without this fix, the table of contents extends to the right edge of the page, ignoring the right margin. The fix limits the width of the table of contents so that it doesn't extend to the end of the page; this artificial margin can be adjusted by increasing or decreasing the extra value subtracted from `$tw`. 
 
 More information about the Neon CRM API can be found at (https://developer.neoncrm.com/).
+
+[Leaflet](https://leafletjs.com/), the JavaScript library used to generate the Member Map, is available under the BSD 2-Clause "Simplified" license.
 
 ## Special Thanks  
 
