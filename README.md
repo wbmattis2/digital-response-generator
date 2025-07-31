@@ -3,8 +3,6 @@ WordPress plugin generating member directory and website data with the Neon CRM 
 
 Written by Benny Mattis for Catholic Volunteer Network, using the Neon CRM API with Leaflet.js, FPDI, and a modified version of TCPDF.
 
-A "pretty" version of these docs can be found at (https://catholicvolunteernetwork.org/wp-content/plugins/neon-wp-plugin/digital-response-generator/docs/).
-
 Please note that as of August 2024, the Digital Response Generator has been fused with the Neon plugin (*neon-wp-plugin*). The Digital Response Generator's files have been moved into the Neon plugin's directory, and *digital-response-generator.php* has been included at the end of the Neon plugin's *plugin.php* file.
 
 ## Purpose
